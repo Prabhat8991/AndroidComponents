@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="componentName"
+            type="String" />
+        <variable
+            name="onClickListener"
+            type="com.example.androidcomponentsreferenceapp.components.adapter.OnItemClickListener" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#B2BCA8"
+        android:onClick="@{() -> onClickListener.onClick(componentName)}">
+
+        <TextView
+            android:id="@+id/componentNameTextView"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center_horizontal"
+            android:text="@{componentName}"
+            tools:text="Item 1" />
+
+    </LinearLayout>
+</layout>

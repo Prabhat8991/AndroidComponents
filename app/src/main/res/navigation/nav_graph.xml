@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/componentsListFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragmentA"
+        android:name="com.example.androidcomponentsreferenceapp.components.navigation.FragmentA"
+        android:label="Fragment A"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/action_fragmentA_to_fragmentB"
+            app:destination="@id/fragmentB" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentB"
+        android:name="com.example.androidcomponentsreferenceapp.components.navigation.FragmentB"
+        android:label="Fragment B"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.example.androidcomponentsreferenceapp.components.navigation.FragmentC"
+        android:label="Fragment C"
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentA2"
+            app:destination="@id/fragmentA"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/fragmentA" />
+    </fragment>
+    <fragment
+        android:id="@+id/componentsListFragment"
+        android:name="com.example.androidcomponentsreferenceapp.components.ComponentsListFragment"
+        android:label="Android Components"
+        tools:layout="@layout/fragment_components_list" >
+        <action
+            android:id="@+id/action_componentsListFragment_to_fragmentA"
+            app:destination="@id/fragmentA" />
+        <action
+            android:id="@+id/action_componentsListFragment_to_marsPropertyListFragment"
+            app:destination="@id/marsPropertyListFragment" />
+        <action
+            android:id="@+id/action_componentsListFragment_to_videoDetailsFragment"
+            app:destination="@id/videoDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marsPropertyListFragment"
+        android:name="com.example.androidcomponentsreferenceapp.components.mvvm.MarsPropertyListFragment"
+        android:label="Mars Property List"
+        tools:layout="@layout/fragment_mars_property_list" />
+    <fragment
+        android:id="@+id/videoDetailsFragment"
+        android:name="com.example.androidcomponentsreferenceapp.components.room.VideoDetailsFragment"
+        android:label="Android Video Gallery"
+        tools:layout="@layout/fragment_video_gallery" />
+</navigation>

@@ -49,6 +49,9 @@
         <action
             android:id="@+id/action_componentsListFragment_to_videoDetailsFragment"
             app:destination="@id/videoDetailsFragment" />
+        <action
+            android:id="@+id/action_componentsListFragment_to_remoteFragment"
+            app:destination="@id/remoteFragment" />
     </fragment>
     <fragment
         android:id="@+id/marsPropertyListFragment"
@@ -60,4 +63,8 @@
         android:name="com.example.androidcomponentsreferenceapp.components.room.VideoDetailsFragment"
         android:label="Android Video Gallery"
         tools:layout="@layout/fragment_video_gallery" />
+    <fragment
+        android:id="@+id/remoteFragment"
+        android:name="com.example.androidcomponentsreferenceapp.components.paging.view.remote.RemoteFragment"
+        android:label="RemoteFragment" />
 </navigation>

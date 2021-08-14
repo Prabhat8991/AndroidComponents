@@ -16,10 +16,10 @@ class ComponentsListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         val binding = FragmentComponentsListBinding.inflate(inflater)
-        binding.componentList.adapter = ComponentsRecyclerViewAdapter(listOfComponents = listOf<String>( "Navigation Component", "Mvvm", "Room", "Notifications", "Work Manager"), onItemClickListener = OnItemClickListener {
+        binding.componentList.adapter = ComponentsRecyclerViewAdapter(listOfComponents = listOf<String>( "Navigation Component", "Mvvm", "Room", "Notifications", "Work Manager", "Paging"), onItemClickListener = OnItemClickListener {
             when(it) {
                 "Navigation Component" -> {
                    findNavController().navigate(R.id.action_componentsListFragment_to_fragmentA)
@@ -31,6 +31,10 @@ class ComponentsListFragment : Fragment() {
 
                 "Room" -> {
                     findNavController().navigate(R.id.action_componentsListFragment_to_videoDetailsFragment)
+                }
+
+                "Paging" -> {
+                    findNavController().navigate(R.id.action_componentsListFragment_to_remoteFragment)
                 }
             }
         })

@@ -70,6 +70,8 @@ dependencies {
 
     implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
     implementation "com.squareup.retrofit2:converter-scalars:$version_retrofit"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpLoggingInterceptorVersion"
+
 
     // Retrofit with Moshi Converter
     implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
@@ -95,4 +97,11 @@ dependencies {
     //MultiDex
     implementation "androidx.multidex:multidex:2.0.1"
 
+    //paging3
+    implementation "androidx.paging:paging-runtime:3.0.0-alpha03"
+    //optional dependency for RxJava support
+    implementation "androidx.paging:paging-rxjava2-ktx:3.0.0-alpha03"
+
+    //image processing lib
+    implementation("io.coil-kt:coil:$coil")
 }
